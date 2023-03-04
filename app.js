@@ -40,3 +40,17 @@ https.get('https://jsonplaceholder.typicode.com/posts/1', (resp) => {
 //Using a module
 const myModule = require('./my-module.js');
 console.log(myModule.myFunction());
+
+//Promises
+const myPromise = new Promise((resolve, reject) => {
+    if (condition) {
+    resolve('Success!');
+    } else {
+    reject('Failure!');
+    }
+   });
+   myPromise.then((result) => {
+    console.log(result);
+   }).catch((error) => {
+    console.log(error);
+   });
